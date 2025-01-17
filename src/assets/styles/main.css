@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .main-page {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .models-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  
+  .model-block {
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+  
+  .model-block:hover {
+    transform: scale(1.05);
+    background-color: #0056b3;
+  }
+  
+  .model-page {
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  

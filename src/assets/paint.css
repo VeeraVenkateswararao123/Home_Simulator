@@ -1,0 +1,14 @@
+.color-input{
+    width: 30%;
+    height: 20vh;
+    padding: 0px;
+    /* outline: none; */
+    /* border: none; */
+    border-radius: 50%;
+    color: black;
+    
+}
+.main_heading{
+    font-family: 'Roboto';
+    background-color: #fcc03d;
+}
