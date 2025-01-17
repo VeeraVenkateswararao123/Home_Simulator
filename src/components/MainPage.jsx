@@ -66,7 +66,7 @@ const MainPage = () => {
                   <button className="box-button">
                     <Link
                       to="/model1"
-                      style={{ textDecoration: "none", color: "white",fontSize:"15px",fontWeight:"bold",fontSize:"15px",fontWeight:"bold" }}
+                      style={{ textDecoration: "none", color: "white",fontSize:"15px",fontWeight:"bold" }}
                     >
                       Building
                     </Link>
