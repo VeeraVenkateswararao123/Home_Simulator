@@ -117,8 +117,8 @@ const Model3 = () => {
     const existingProps = materialUpdates[partId] || {};
     setColor(existingProps.color || "#ff6347");
     setSelectedTexture(existingProps.texture || null);
-    setTileScaleX(existingProps.tileScaleX || 1);
-    setTileScaleY(existingProps.tileScaleY || 1);
+    setTileScaleX(existingProps.tileScaleX || 5);
+    setTileScaleY(existingProps.tileScaleY || 5);
     setFallCeiling(existingProps.texture || null);
   };
 
@@ -558,8 +558,8 @@ const Model3 = () => {
       </div>
     ))}
   </div>
-  {/* <div className="d-flex justify-content-around w-100 align-items-center mt-2">
-    <label>Tile Scale</label>
+  <div className="d-flex justify-content-around w-100 align-items-center mt-2">
+    <label> Scale</label>
     <label>
       X:
       <input
@@ -584,7 +584,7 @@ const Model3 = () => {
         style={{ width: "47px" }}
       />
     </label>
-  </div> */}
+  </div> 
   <button
     type="button"
     className="btn btn-success fw-bolder mt-2"

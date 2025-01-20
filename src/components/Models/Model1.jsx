@@ -114,8 +114,8 @@ const Model1 = () => {
     const existingProps = materialUpdates[partId] || {};
     setColor(existingProps.color || "#ff6347");
     setSelectedTexture(existingProps.texture || null);
-    setTileScaleX(existingProps.tileScaleX || 1);
-    setTileScaleY(existingProps.tileScaleY || 1);
+    setTileScaleX(existingProps.tileScaleX || 5);
+    setTileScaleY(existingProps.tileScaleY || 5);
     setFallCeiling(existingProps.texture || null);
   };
 
@@ -427,22 +427,25 @@ const Model1 = () => {
                   enableDamping={true}
                   dampingFactor={0.9}
                 />
-                
+
                 <React.Suspense fallback={null}>
-                <Bounds fit clip margin={3}>
+                  <Bounds fit clip margin={3}>
                     <DynamicMaterialModel
                       modelPath="https://ssvconstructions.in/wp-content/uploads/2025/01/glb_files/Apartment.glb" // Your GLTF model path
                       materialUpdates={materialUpdates}
                       onPartSelected={handlePartSelection}
                     />
-                     </Bounds>
-                  </React.Suspense>
-               
+                  </Bounds>
+                </React.Suspense>
               </Canvas>
               <Loader
-                containerStyles={{ backgroundColor: "rgba(0, 0, 0, 0.8)"}} // Custom container styles
+                containerStyles={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }} // Custom container styles
                 innerStyles={{ color: "#fff", fontSize: "16px" }} // Custom text styles
-                barStyles={{ background: "#ff6347",width:"100%",height:"5px" }} // Custom bar styles
+                barStyles={{
+                  background: "#ff6347",
+                  width: "100%",
+                  height: "5px",
+                }} // Custom bar styles
                 dataInterpolation={(p) => `Loading: ${p.toFixed(5)}%`}
               />
             </div>
@@ -572,33 +575,33 @@ const Model1 = () => {
                   </div>
                 ))}
               </div>
-              {/* <div className="d-flex justify-content-around w-100 align-items-center mt-2">
-    <label>Tile Scale</label>
-    <label>
-      X:
-      <input
-        type="number"
-        min="0.1"
-        step="0.1"
-        value={tileScaleX}
-        onChange={(e) => setTileScaleX(parseFloat(e.target.value))}
-        disabled={!selectedCeilingTexture}
-        style={{ width: "47px" }}
-      />
-    </label>
-    <label>
-      Y:
-      <input
-        type="number"
-        min="0.1"
-        step="0.1"
-        value={tileScaleY}
-        onChange={(e) => setTileScaleY(parseFloat(e.target.value))}
-        disabled={!selectedCeilingTexture}
-        style={{ width: "47px" }}
-      />
-    </label>
-  </div> */}
+              <div className="d-flex justify-content-around w-100 align-items-center mt-2">
+                <label>Scale</label>
+                <label>
+                  X:
+                  <input
+                    type="number"
+                    min="0.1"
+                    step="0.1"
+                    value={tileScaleX}
+                    onChange={(e) => setTileScaleX(parseFloat(e.target.value))}
+                    disabled={!selectedCeilingTexture}
+                    style={{ width: "47px" }}
+                  />
+                </label>
+                <label>
+                  Y:
+                  <input
+                    type="number"
+                    min="0.1"
+                    step="0.1"
+                    value={tileScaleY}
+                    onChange={(e) => setTileScaleY(parseFloat(e.target.value))}
+                    disabled={!selectedCeilingTexture}
+                    style={{ width: "47px" }}
+                  />
+                </label>
+              </div>
               <button
                 type="button"
                 className="btn btn-success fw-bolder mt-2"
